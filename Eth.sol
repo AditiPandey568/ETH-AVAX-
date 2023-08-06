@@ -1,25 +1,42 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract ExampleFunctions {
-    // Function demonstrating the use of require
-    function requireFunction(uint256 _value) external pure returns (bool) {
-        require(_value > 0, "Value must be greater than zero");
-        return true;
+contract HospitalManagement {
+    struct Patient {
+        uint id;
+        string name;
+        bool admitted;
     }
-
-    // Function demonstrating the use of assert
-    function assertFunction(uint256 _value) external pure returns (uint256) {
-        uint256 minValue = 100;
-        assert(_value >= minValue);
-        return _value;
+    
+    mapping(uint => Patient) public patients;
+    uint public patientCount;
+    
+    
+    function admitPatient(uint _id, string memory _name) public {
+        // require statement
+        require(!patients[_id].admitted, "Patient is already admitted");
+        
+        // assert statement
+        assert(bytes(_name).length > 0);
+        
+        patients[_id] = Patient(_id, _name, true);
+        patientCount++;
     }
-
-    // Function demonstrating the use of revert
-    function revertFunction(uint256 _value) external pure returns (uint256) {
-        if (_value > 1000) {
-            revert("Value cannot be greater than 1000");
+    
+    function dischargePatient(uint _id) public {
+        // require statement
+        require(patients[_id].admitted, "Patient is not admitted");
+        
+        patients[_id].admitted = false;
+        patientCount--;
+    }
+    
+    function updatePatientName(uint _id, string memory _name) public {
+        // revert statement
+        if (bytes(_name).length == 0) {
+            revert("Name cannot be empty");
         }
-        return _value;
+        
+        patients[_id].name = _name;
     }
 }
