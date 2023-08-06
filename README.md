@@ -6,8 +6,8 @@ This program is a simple contract written in Solidity, a programming language us
 It allows only the contract owner to set a value, enforces a minimum value of 100, and prevents setting values greater than 1000, reverting transactions with appropriate error messages when conditions are not met.
 
 # AUTHOR-
-Metacrafter Chris
-@metacraftersio
+Aditi Pandey
+
 
 # LICENSE
 This project is licensed under the MIT License - see the LICENSE.md file for details
