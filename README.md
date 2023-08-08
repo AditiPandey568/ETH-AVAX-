@@ -1,7 +1,28 @@
-# *ErrorHandling Smart Contract*
+# *Error Handling Smart Contract*
 The ErrorHandling smart contract demonstrates different error handling mechanisms in Solidity. It provides examples of using require, assert, and revert statements to handle errors and exceptions in Solidity contracts.
 
-## Getting Started
+# Discription-
+Solidity smart contract, named "LibraryMembership," represents a simplified system for managing library memberships and borrowed books. It includes the following functionalities-
+
+* Members Management:
+The contract maintains a record of library members.
+Members are identified by a unique ID and have a name.
+New members can be added, and existing members can be deactivated (removed) from the library system.
+
+ * Book Management:
+The contract tracks available books that can be borrowed.
+Books are identified by a unique ID and have a title.
+New books can be added to the library's collection.
+
+* Borrowing and Returning Books:
+Members can borrow available books from the library.
+Borrowed books are marked as unavailable until returned.
+Members can return borrowed books, making them available again.
+
+* Contract Initialization:
+The contract is initialized with two sample books upon deployment.
+
+# Getting Started
 To use the ErrorHandling contract, you'll need to have a Solidity development environment set up. Make sure you have the following prerequisites installed:
 * Solidity compiler (version 0.8.x)
 ## Usage
@@ -11,20 +32,18 @@ To use the ErrorHandling contract, you'll need to have a Solidity development en
 
 3. Deploy the contract to a compatible blockchain network, such as Ethereum.
 
-4. Once the contract is deployed, you can interact with it by calling the checkValue function, providing a uint256 value as an argument.
+4. Interact with the Contract:
+After deploying the contract, you'll see the contract's functions listed below the contract details.
+Click on the function you want to interact with (e.g., "addMember").
+Enter the required parameters (e.g., member ID and name) in the input fields provided.
+Click on the "transact" button to execute the function.
+then can also interact with other functions, such as "removeMember," "borrowBook," "returnBook," and "addBook," in a similar manner.
 
-5. The checkValue function will perform the following error handling operations:
+5.  For Viewing Contract State:
+ In the "Deployed Contracts" section,we see the deployed contract instance with its functions and state variables. then just interact with the contract using the provided interface.
 
-    * It uses the require statement to check if the value is greater than 0. If the condition is not met, it throws an exception with the error message "Value must be greater than 0."
-
-    * It uses the assert statement to validate internal consistency. It multiplies the value by 2 and checks if the result is greater than or equal to the value. If the condition is false, it indicates an internal error, and the contract execution is reverted.
-
-    * It uses the revert statement to revert the transaction and throw an exception if the value is equal to 42. The error message "The value cannot be 42" is provided in this case.
-
-6. The function will return true if none of the error conditions are met.
-
-## Error Handling Mechanisms
-The ErrorHandling contract demonstrates the following error handling mechanisms:
+# Error Handling Mechanisms
+The ErrorHandling contract demonstrates the following error-handling mechanisms:
 
 * require statement: Used to enforce a condition that must be met for the function to continue execution. It throws an exception if the condition is not met.
 
@@ -32,5 +51,5 @@ The ErrorHandling contract demonstrates the following error handling mechanisms:
 
 * revert statement: Used to revert the current transaction and throw an exception with a specific error message.
 
-## License
+# License
 The ErrorHandling smart contract is licensed under the MIT License.
