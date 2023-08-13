@@ -19,7 +19,7 @@ The `MetacraftersIDupdationsystem` is a basic Ethereum smart contract that allow
 ### Contract Variables
 
 - `owner`: This is the address of the contract owner, set during contract deployment.
-- `ID`: A public unsigned integer variable initialized to 50, representing the stored ID.
+- `MetacraftersID`: A public unsigned integer variable initialized to 50, representing the stored ID.
 
 ### Events
 
