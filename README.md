@@ -1,4 +1,4 @@
-1. # ETH-AVAX-1 FUNCTIONS & ERRORS
+# ETH-AVAX-1 FUNCTIONS & ERRORS
 
 This Solidity smart contract is designed to demonstrate basic validation and error handling techniques. It includes functions to update a stored id while ensuring that certain conditions are met.
 
